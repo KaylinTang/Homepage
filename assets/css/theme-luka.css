@@ -194,9 +194,9 @@ body.theme-luka .image.avatar img {
 }
 
 body.theme-luka .site-name {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
   color: var(--luka-text);
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1.2;
 }
 
@@ -220,6 +220,53 @@ body.theme-luka .site-email {
   font-size: 13px;
   font-family: "Ubuntu Mono", "SFMono-Regular", monospace;
   word-break: break-all;
+}
+
+body.theme-luka .site-email-copy {
+  position: relative;
+  min-height: 24px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--luka-accent);
+  font: inherit;
+  cursor: pointer;
+}
+
+body.theme-luka .copy-email-icon {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 6px);
+  font-size: 11px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-3px, -50%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+body.theme-luka .site-email-copy:hover .copy-email-icon,
+body.theme-luka .site-email-copy:focus-visible .copy-email-icon,
+body.theme-luka .site-email-copy.is-copied .copy-email-icon {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+body.theme-luka .site-email-copy.is-copied {
+  color: var(--luka-accent);
+}
+
+body.theme-luka .visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 body.theme-luka .social-icons {
@@ -321,6 +368,25 @@ body.theme-luka .section-title {
 
 body.theme-luka .section-body p {
   margin: 0 0 14px;
+}
+
+body.theme-luka .section-body .about-quote-intro {
+  margin-bottom: 8px;
+}
+
+body.theme-luka .about-quotes {
+  margin: 0 0 0 clamp(8px, 2vw, 14px);
+  color: var(--luka-text);
+  line-height: 1.55;
+  opacity: 0.82;
+}
+
+body.theme-luka .section-body .about-quotes p {
+  margin: 0 0 6px;
+}
+
+body.theme-luka .section-body .about-quotes p:last-child {
+  margin-bottom: 0;
 }
 
 body.theme-luka .card {
@@ -724,7 +790,7 @@ body.theme-luka strong {
   }
 
   body.theme-luka .site-name {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   body.theme-luka .experience-item {
@@ -738,6 +804,12 @@ body.theme-luka strong {
   body.theme-luka .visitor-card {
     width: 100%;
     max-width: 280px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.theme-luka .copy-email-icon {
+    transition: none;
   }
 }
 
