@@ -4,13 +4,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kaylin(Huilin) Tang | Personal Homepage</title>
-  <meta name="description" content="Kaylin(Huilin) Tang is a Master of Information Technology student specialising in Applied Computing at The University of Western Australia.">
-  <meta name="author" content="Kaylin(Huilin) Tang">
+  <title>Kaylin(Huilin) Tang | Portfolio</title>
+  <meta name="description" content="Explore Kaylin (Huilin) Tang’s portfolio: Applied Computing projects in data warehousing, machine learning and web development, plus hands-on IT experience.">
+  <meta name="author" content="Kaylin (Huilin) Tang">
   <meta name="keywords" content="Kaylin Tang, Huilin Tang, UWA, information technology, applied computing">
-  <meta property="og:title" content="Kaylin(Huilin) Tang | Personal Homepage">
-  <meta property="og:description" content="Kaylin(Huilin) Tang is a Master of Information Technology student specialising in Applied Computing at The University of Western Australia.">
+  <link rel="canonical" href="https://kaylintang.github.io/Homepage-luka-template/">
+
+  <meta property="og:title" content="Kaylin(Huilin) Tang | Portfolio">
+  <meta property="og:description" content="Explore Kaylin (Huilin) Tang’s portfolio: Applied Computing projects in data warehousing, machine learning and web development, plus hands-on IT experience.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kaylintang.github.io/Homepage-luka-template/">
+  <meta property="og:site_name" content="Kaylin (Huilin) Tang">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:image" content="https://kaylintang.github.io/Homepage-luka-template/assets/img/web-photo-0.JPEG">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1670">
+  <meta property="og:image:height" content="1670">
+  <meta property="og:image:alt" content="Portrait of Kaylin Tang">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kaylin(Huilin) Tang | Portfolio">
+  <meta name="twitter:description" content="Explore Kaylin (Huilin) Tang’s portfolio: Applied Computing projects in data warehousing, machine learning and web development, plus hands-on IT experience.">
+  <meta name="twitter:image" content="https://kaylintang.github.io/Homepage-luka-template/assets/img/web-photo-0.JPEG">
+  <meta name="twitter:image:alt" content="Portrait of Kaylin Tang">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +39,7 @@
   <link rel="stylesheet" href="assets/css/font_sans_serif.css">
   <link rel="stylesheet" href="assets/css/theme-luka.css">
 </head>
-<body class="theme-luka">
+<body id="top" class="theme-luka">
   <nav class="top-nav" aria-label="Primary navigation">
     <div class="nav-container">
       <div class="nav-left">
@@ -32,10 +48,9 @@
         </button>
       </div>
       <div class="nav-right nav-links">
-        <a href="#about">About</a>
-        <a href="#research-projects">Research Projects</a>
-        <a href="#work-experience">Work Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">Home</a>
+        <a href="#work-experience">Experience</a>
+        <a href="#academic-projects">Projects</a>
       </div>
     </div>
   </nav>
@@ -55,14 +70,17 @@
             id="copyEmailButton"
             class="site-email-copy"
             type="button"
-            data-email="KaylinTang@outlook.com"
+            data-email="Kaylintang@outlook.com"
             title="Click to copy email address"
-            aria-label="Copy KaylinTang@outlook.com"
+            aria-label="Copy Kaylintang@outlook.com"
           >
-            <span>KaylinTang@outlook.com</span>
+            <span>Kaylintang@outlook.com</span>
             <i class="fa-solid fa-link copy-email-icon" aria-hidden="true"></i>
           </button>
           <span id="copyEmailStatus" class="visually-hidden" aria-live="polite"></span>
+        </p>
+        <p class="site-cv">
+          <a class="cv-link" href="assets/cv/cv_kaylin.pdf" download="Kaylin-Tang-CV.pdf">Download CV</a>
         </p>
 
         <div class="social-icons" aria-label="Contact links">
@@ -128,7 +146,7 @@
                 <p class="exp-detail">Master of Information Technology</p>
                 <p class="exp-detail">Specialisation: Applied Computing | Full-time</p>
                 <p class="exp-detail">Perth, Australia</p>
-                <p class="exp-period">2025.02—2027.02</p>
+                <p class="exp-period">February 2025 - February 2027</p>
               </div>
             </div>
           </div>
@@ -146,94 +164,7 @@
                 <p class="exp-detail">Bachelor of Engineering</p>
                 <p class="exp-detail">Major: Air Transportation Management | GPA：3.8/5.0</p>
                 <p class="exp-detail">Nanjing, China</p>
-                <p class="exp-period">2017.09—2021.06</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="research-projects">
-        <h2 class="section-title">Research Projects</h2>
-        <div class="section-body">
-          <div class="card timeline-item">
-            <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
-              <div class="experience-content">
-                <p class="exp-title"><strong>Civil Aviation Data Warehousing &amp; Network Analytics</strong></p>
-                <p class="exp-detail">Unit: Data Warehousing</p>
-                <p class="exp-period">2026.02—2026.06</p>
-                <ul class="experience-list">
-                  <li>Designed and implemented an end-to-end data engineering pipeline for large-scale civil aviation datasets, including ETL, dimensional modelling, and analytical data warehousing.</li>
-                  <li>Constructed a Star Schema and graph database architecture to support multidimensional analysis of flight operations, airport efficiency, and passenger behaviour.</li>
-                  <li>Modelled global airline networks in Neo4j and performed graph-based analyses using Cypher and APOC for route connectivity and transit analysis.</li>
-                  <li>Produced business insights through SQL analytics, Power BI visualisation, and association rule mining, demonstrating the application of data warehousing techniques to transportation systems.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="card timeline-item">
-            <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
-              <div class="experience-content">
-                <p class="exp-title"><strong>Machine Learning for Predictive Analytics</strong></p>
-                <p class="exp-detail">Unit: Machine Learning</p>
-                <p class="exp-period">2026.02—2026.06</p>
-                <ul class="experience-list">
-                  <li>Implemented and evaluated classical machine learning algorithms for classification, regression, ensemble learning, and clustering using NumPy and scikit-learn.</li>
-                  <li>Built a Softmax Regression classifier from scratch with vectorised gradient descent and benchmarked its performance against the scikit-learn implementation on the MNIST handwritten digit dataset.</li>
-                  <li>Developed predictive models including Decision Trees, Random Forests, AdaBoost, Voting Classifiers, and Support Vector Machines, with systematic evaluation using accuracy, precision, recall, and F1-score.</li>
-                  <li>Applied feature importance analysis and unsupervised clustering to investigate model interpretability and data patterns in real-world healthcare and image datasets.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="card timeline-item">
-            <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
-              <div class="experience-content">
-                <p class="exp-title"><strong>CITS4401 Software Requirements and Design</strong></p>
-                <p class="exp-detail">Group Project Member</p>
-                <p class="exp-period">2026S1</p>
-                <ul class="experience-list">
-                  <li>Background: Expected to work with the group to develop a new Research Ethics Management System (REMS) for the University of East Angria as part of a consultancy team.</li>
-                  <li>Addressing the problem by applying the Requirements Engineering skills, such as Requirements Elicitation/Analysis/Specification/Validation as well as the techniques for software design.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="card timeline-item">
-            <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
-              <div class="experience-content">
-                <p class="exp-title"><strong>CITS5505 Agile Web Development</strong></p>
-                <p class="exp-detail">Group Project Member</p>
-                <p class="exp-period">2026S1</p>
-                <ul class="experience-list">
-                  <li>Background: Expected to build a web-application with several key requirements, including a client-server architecture and basic interactive functionalities.</li>
-                  <li>Practicing web developping technologies of HTML/CSS/JavaScript/jQuery/Flask+plugins and other powerful libraries.</li>
-                  <li>Working as team following the agile web development workflow with the help of git for version controlling.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="card timeline-item">
-            <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
-              <div class="experience-content">
-                <p class="exp-title"><strong>Innovation Training Program for College Students</strong></p>
-                <p class="exp-detail">Group Member</p>
-                <p class="exp-period">2020.03—2021.03</p>
-                <ul class="experience-list">
-                  <li>Publication: Relationship between Evolution Characteristics of Aviation Carbon Emissions and Regional Economic Development. China Transportation Review(2022).</li>
-                  <li>Applied the Logarithmic Mean Divisia Index (LMDI) decomposition method to quantify annual carbon emissions of major airports in the Greater Bay Area (2009–2016), based on data from the OAG aviation database.</li>
-                  <li>Analysed key drivers of aviation carbon emissions and proposed data-driven recommendations for route network optimisation, aviation technology improvement, and sustainable regional transportation development.</li>
-                  <li>This program won the First Prize of the 6th NUAA Undergraduate Academic Forum in December 2020.</li>
-                </ul>
+                <p class="exp-period">September 2017 - June 2021</p>
               </div>
             </div>
           </div>
@@ -241,15 +172,17 @@
       </section>
 
       <section class="section" id="work-experience">
-        <h2 class="section-title">Work Experience</h2>
+        <h2 class="section-title">Experience</h2>
         <div class="section-body">
           <div class="card timeline-item">
             <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
+              <span class="education-logo-wrapper">
+                <img src="assets/img/uwa-logo.png" alt="The University of Western Australia logo" class="institution-logo--uwa">
+              </span>
               <div class="experience-content">
                 <p class="exp-title"><strong>University IT of UWA</strong></p>
                 <p class="exp-detail">IT Intern</p>
-                <p class="exp-period">2026.06—2026.07</p>
+                <p class="exp-period">June 2026 - July 2026</p>
                 <ul class="experience-list">
                   <li>Contributed to the optimisation of the University's new student portal through user-centred analysis, usability evaluation, and evidence-based improvement recommendations.</li>
                   <li>Developed practical experience in user-centred design, digital transformation, and enterprise software development within a large-scale university IT environment.</li>
@@ -264,10 +197,10 @@
               <div class="experience-content">
                 <p class="exp-title"><strong>Visual China Group Co., Ltd. (VCG)</strong></p>
                 <p class="exp-detail">Image Contributor</p>
-                <p class="exp-period">2025.03-now</p>
+                <p class="exp-period">March 2025 - Present</p>
                 <ul class="experience-list">
-                  <li>Working as a part-time online image contributor for VCG.COM, with a focus on landscape photography.</li>
-                  <li>Learning professional knowledge about photography and making practices through travelling and from daily life.</li>
+                  <li>Create and submit landscape photography for VCG.COM as a part-time online image contributor.</li>
+                  <li>Develop professional photography skills through travel and everyday visual documentation.</li>
                 </ul>
               </div>
             </div>
@@ -279,12 +212,12 @@
               <div class="experience-content">
                 <p class="exp-title"><strong>Changzhou International Airport Group</strong></p>
                 <p class="exp-detail">Marketing Assistant</p>
-                <p class="exp-period">2021.07-2022.03</p>
+                <p class="exp-period">July 2021 - March 2022</p>
                 <ul class="experience-list">
-                  <li>Cooperating with OTAs such as Trip.com and Ly.com to plan and organize flight-related transportation sales activities.</li>
-                  <li>Managing the operation of airport shuttles and monitoring the big data using PowerBI for visualization and analysis.</li>
-                  <li>Participating in business activities such as negotiations with government officers to expand new flight lines.</li>
-                  <li>Dealing with financial contracts and payments with Financial Department partners.</li>
+                  <li>Collaborated with OTAs, including Trip.com and Ly.com, to plan and organise sales activities for flight-related transport services.</li>
+                  <li>Managed airport shuttle operations and monitored operational data using Power BI for visualisation and analysis.</li>
+                  <li>Participated in negotiations with government stakeholders to support the development of new flight routes.</li>
+                  <li>Coordinated contracts and payments with colleagues in the Finance Department.</li>
                 </ul>
               </div>
             </div>
@@ -296,10 +229,97 @@
               <div class="experience-content">
                 <p class="exp-title"><strong>Shanghai Hawker Pacific Business Aviation Service Centre</strong></p>
                 <p class="exp-detail">Marketing Intern</p>
-                <p class="exp-period">2020.07-2020.08</p>
+                <p class="exp-period">July 2020 - August 2020</p>
                 <ul class="experience-list">
-                  <li>Working in FBO and MRO to know the operation mode of business aircraft services.</li>
-                  <li>Assisting the Marketing Department to analyze business data and complete short-term Industry report.</li>
+                  <li>Gained first-hand knowledge of FBO and MRO operations and business aviation service delivery.</li>
+                  <li>Assisted the Marketing Department with business data analysis and a short-term industry report.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="academic-projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="section-body">
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>Civil Aviation Data Warehousing &amp; Network Analytics</strong></p>
+                <p class="exp-detail">Unit: Data Warehousing</p>
+                <p class="exp-period">February 2026 - June 2026</p>
+                <ul class="experience-list">
+                  <li>Engineered an end-to-end ETL pipeline for large-scale civil aviation datasets and structured the resulting data in an analytical warehouse.</li>
+                  <li>Designed a star schema and graph database architecture for multidimensional analysis of flight operations, airport efficiency, and passenger behaviour.</li>
+                  <li>Built a global airline network in Neo4j and used Cypher and APOC to analyse route connectivity and transit patterns.</li>
+                  <li>Delivered decision-ready findings through SQL analysis, Power BI visualisations, and association rule mining.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>Machine Learning for Predictive Analytics</strong></p>
+                <p class="exp-detail">Unit: Machine Learning</p>
+                <p class="exp-period">February 2026 - June 2026</p>
+                <ul class="experience-list">
+                  <li>Implemented classification, regression, ensemble learning, and clustering workflows using NumPy and scikit-learn.</li>
+                  <li>Built a Softmax Regression classifier from scratch with vectorised gradient descent and benchmarked it against scikit-learn on the MNIST dataset.</li>
+                  <li>Trained and compared Decision Trees, Random Forests, AdaBoost, Voting Classifiers, and Support Vector Machines using accuracy, precision, recall, and F1-score.</li>
+                  <li>Used feature-importance analysis and unsupervised clustering to interpret model behaviour and identify patterns in healthcare and image datasets.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>Research Ethics Management System (REMS)</strong></p>
+                <p class="exp-detail">CITS4401 Software Requirements and Design · Group Project</p>
+                <p class="exp-period">February 2026 - June 2026</p>
+                <ul class="experience-list">
+                  <li>Collaborated in a consultancy team to define a Research Ethics Management System (REMS) for the University of East Angria.</li>
+                  <li>Contributed to requirements elicitation, analysis, specification, and validation, translating stakeholder needs into a validated requirements set and software design artefacts.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>Full-Stack Client–Server Web Application</strong></p>
+                <p class="exp-detail">CITS5505 Agile Web Development · Group Project</p>
+                <p class="exp-period">February 2026 - June 2026</p>
+                <ul class="experience-list">
+                  <li>Built a client-server web application with a Flask backend and responsive, interactive front-end features.</li>
+                  <li>Implemented application functionality with HTML, CSS, JavaScript, jQuery, Flask, and supporting libraries.</li>
+                  <li>Used Git and an agile workflow to coordinate development, integrate team contributions, and deliver a functional application.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>Innovation Training Program for College Students</strong></p>
+                <p class="exp-detail">Group Member</p>
+                <p class="exp-period">March 2020 - March 2021</p>
+                <ul class="experience-list">
+                  <li>Contributed to the study published as “Relationship between Evolution Characteristics of Aviation Carbon Emissions and Regional Economic Development” in <em>China Transportation Review</em> (2022).</li>
+                  <li>Applied the Logarithmic Mean Divisia Index (LMDI) decomposition method to quantify annual carbon emissions of major airports in the Greater Bay Area (2009–2016), based on data from the OAG aviation database.</li>
+                  <li>Identified key drivers of aviation carbon emissions and developed recommendations for route-network optimisation, aviation technology improvement, and sustainable regional transport.</li>
+                  <li>Received First Prize at the 6th NUAA Undergraduate Academic Forum in December 2020.</li>
                 </ul>
               </div>
             </div>
@@ -313,71 +333,50 @@
           <dl class="skills-groups">
             <div>
               <dt>Programming</dt>
-              <dd>Python, R, C</dd>
+              <dd>C, R, Python</dd>
             </div>
             <div>
-              <dt>Databases</dt>
-              <dd>MySQL, PostgreSQL, Neo4j</dd>
+              <dt>Web Development</dt>
+              <dd>HTML, CSS, JavaScript, TypeScript, React, Next.js</dd>
             </div>
             <div>
-              <dt>Tools</dt>
-              <dd>Power BI, Git, GitHub, Docker</dd>
+              <dt>Cloud &amp; Systems</dt>
+              <dd>AWS (EC2, S3, IAM, DynamoDB, KMS), Linux</dd>
             </div>
             <div>
-              <dt>Computing</dt>
-              <dd>Web Dev, Cloud Computing, High Performance Computing</dd>
+              <dt>Data &amp; Databases</dt>
+              <dd>MySQL, PostgreSQL, Neo4j, Power BI</dd>
+            </div>
+            <div>
+              <dt>Tools &amp; Collaboration</dt>
+              <dd>Git, GitHub, Agile / Kanban</dd>
             </div>
             <div>
               <dt>Languages</dt>
-              <dd>Mandarin, English (IELTS 7.0), Japanese (Completed a short-term language program at Waseda University)</dd>
+              <dd>Mandarin, English (IELTS 7.0), Japanese (Completed a short-term language programme at Waseda University)</dd>
             </div>
           </dl>
         </div>
       </section>
 
-      <section class="section" id="interests">
-        <h2 class="section-title">Interests</h2>
+      <section class="section" id="awards">
+        <h2 class="section-title">Awards</h2>
         <div class="section-body">
-          <dl class="interests-list">
-            <div>
-              <dt>Photography</dt>
-              <dd>I enjoy using photography to record places, everyday moments, and visual details.</dd>
-            </div>
-            <div>
-              <dt>Chinese Chess (Xiangqi)</dt>
-              <dd>I enjoy the strategic thinking, judgement, and different possibilities that emerge in each game.</dd>
-            </div>
-            <div>
-              <dt>Reading</dt>
-              <dd>I enjoy reading.</dd>
-            </div>
-            <div>
-              <dt>Chinese Calligraphy</dt>
-              <dd>I am interested in its structure, rhythm, traditional aesthetics, and the process of writing.</dd>
-            </div>
-            <div>
-              <dt>Piano</dt>
-              <dd>Playing piano helps me relax and stay creative outside study and technology work.</dd>
-            </div>
-          </dl>
+          <ul class="awards-grid">
+            <li class="award-item">
+              <i class="fa-solid fa-award award-icon" aria-hidden="true"></i>
+              <span class="award-text">UWA Global Excellence Scholarship (2025)</span>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="section" id="contact">
-        <h2 class="section-title">Contact</h2>
-        <div class="section-body contact-list">
-          <img class="contact-photo" src="assets/img/web-photo-1.png" alt="Kaylin Tang">
-          <a class="cv-link" href="assets/cv/cv_kaylin.pdf" target="_blank" rel="noopener noreferrer">
-            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
-            View CV
-          </a>
-          <p><strong>Email:</strong> <a href="mailto:24320547@student.uwa.edu.au">24320547@student.uwa.edu.au</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kaylintang149/" target="_blank" rel="noopener noreferrer">Kaylin Tang | LinkedIn</a></p>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
+      <div class="back-to-top-wrapper">
+        <a class="back-to-top" href="#top">Back to Top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+      </div>
       <p>
         &copy; 2026 Kaylin(Huilin) Tang
         <br>
@@ -447,7 +446,7 @@
         copyIcon.className = 'fa-solid fa-link copy-email-icon';
         copyEmailButton.classList.remove('is-copied');
         copyEmailButton.title = 'Click to copy email address';
-        copyEmailButton.setAttribute('aria-label', 'Copy KaylinTang@outlook.com');
+        copyEmailButton.setAttribute('aria-label', 'Copy Kaylintang@outlook.com');
       }
 
       copyEmailButton.addEventListener('click', function() {
