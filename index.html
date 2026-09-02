@@ -48,10 +48,21 @@
         </div>
 
         <h1 class="site-name">Kaylin(Huilin) Tang</h1>
-        <p class="site-role">Master of Information Technology · Applied Computing<br><a class="institution-link" href="https://www.uwa.edu.au/" target="_blank" rel="noopener noreferrer">The University of Western Australia</a></p>
+        <p class="site-role">IT · Applied Computing</p>
         <p class="site-location">Perth, Australia</p>
         <p class="site-email">
-          <a href="mailto:24320547@student.uwa.edu.au">24320547@student.uwa.edu.au</a>
+          <button
+            id="copyEmailButton"
+            class="site-email-copy"
+            type="button"
+            data-email="KaylinTang@outlook.com"
+            title="Click to copy email address"
+            aria-label="Copy KaylinTang@outlook.com"
+          >
+            <span>KaylinTang@outlook.com</span>
+            <i class="fa-solid fa-link copy-email-icon" aria-hidden="true"></i>
+          </button>
+          <span id="copyEmailStatus" class="visually-hidden" aria-live="polite"></span>
         </p>
 
         <div class="social-icons" aria-label="Contact links">
@@ -67,6 +78,24 @@
           >
             <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
           </a>
+          <a
+            href="https://github.com/KaylinTang"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+            aria-label="Kaylin Tang on GitHub"
+          >
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://kaylintang.ongridea.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Blog"
+            aria-label="Visit Kaylin Tang's blog"
+          >
+            <i class="fa-solid fa-blog" aria-hidden="true"></i>
+          </a>
         </div>
 
       </div>
@@ -76,7 +105,13 @@
       <section class="section" id="about">
         <h2 class="section-title">About Me</h2>
         <div class="section-body">
-          <p>I am Kaylin(Huilin) Tang, a Master of Information Technology student at The University of Western Australia, specialising in Applied Computing. I am currently based in Perth, Australia.</p>
+          <p>Hi, I’m Kaylin (唐慧琳). I am a postgraduate student at The University of Western Australia, currently in my final semester of Information Technology studies, specialising in Applied Computing. I’m based in Perth, WA, and always open to potential work and collaboration opportunities.</p>
+          <p>Before moving into IT, I completed a Bachelor of Engineering in Nanjing, China. I became interested in how computing can work across industries to solve real-world problems, which led me to pursue postgraduate study in IT and build a stronger technical foundation. My current interests are IT support and cloud services, with a particular interest in the infrastructure that supports the continued growth of AI.</p>
+          <p class="about-quote-intro">Technology has taught me to think more logically and systematically, but I also enjoy seeing the world through a different lens. I’d like to share two lines that I particularly like:</p>
+          <div class="about-quotes">
+            <p lang="zh-Hans"><em>“寄蜉蝣于天地，渺沧海之一粟。哀吾生之须臾，羡长江之无穷。”</em></p>
+            <p><em>“In case I don't see ya, good afternoon, good evening, and good night!”</em></p>
+          </div>
         </div>
       </section>
 
@@ -356,6 +391,9 @@
     (function() {
       const themeToggle = document.getElementById('themeToggle');
       const icon = themeToggle.querySelector('i');
+      const copyEmailButton = document.getElementById('copyEmailButton');
+      const copyEmailStatus = document.getElementById('copyEmailStatus');
+      let copyFeedbackTimer;
 
       function setTheme(isDark) {
         document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
@@ -371,6 +409,65 @@
       themeToggle.addEventListener('click', function() {
         const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
         setTheme(!isDark);
+      });
+
+      function legacyCopyText(text) {
+        return new Promise(function(resolve, reject) {
+          const temporaryInput = document.createElement('textarea');
+          temporaryInput.value = text;
+          temporaryInput.setAttribute('readonly', '');
+          temporaryInput.setAttribute('aria-hidden', 'true');
+          temporaryInput.style.position = 'fixed';
+          temporaryInput.style.opacity = '0';
+          document.body.appendChild(temporaryInput);
+          temporaryInput.select();
+
+          try {
+            document.execCommand('copy') ? resolve() : reject(new Error('Copy failed'));
+          } catch (error) {
+            reject(error);
+          } finally {
+            document.body.removeChild(temporaryInput);
+          }
+        });
+      }
+
+      function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(text).catch(function() {
+            return legacyCopyText(text);
+          });
+        }
+
+        return legacyCopyText(text);
+      }
+
+      function resetCopyButton() {
+        const copyIcon = copyEmailButton.querySelector('i');
+        copyIcon.className = 'fa-solid fa-link copy-email-icon';
+        copyEmailButton.classList.remove('is-copied');
+        copyEmailButton.title = 'Click to copy email address';
+        copyEmailButton.setAttribute('aria-label', 'Copy KaylinTang@outlook.com');
+      }
+
+      copyEmailButton.addEventListener('click', function() {
+        clearTimeout(copyFeedbackTimer);
+        copyEmailStatus.textContent = '';
+
+        copyText(copyEmailButton.dataset.email).then(function() {
+          const copyIcon = copyEmailButton.querySelector('i');
+          copyIcon.className = 'fa-solid fa-check copy-email-icon';
+          copyEmailButton.classList.add('is-copied');
+          copyEmailButton.title = 'Copied';
+          copyEmailButton.setAttribute('aria-label', 'Email address copied');
+          copyEmailStatus.textContent = 'Email address copied to clipboard.';
+          copyFeedbackTimer = setTimeout(resetCopyButton, 1800);
+        }).catch(function() {
+          copyEmailButton.title = 'Unable to copy';
+          copyEmailButton.setAttribute('aria-label', 'Unable to copy email address');
+          copyEmailStatus.textContent = 'Unable to copy email address.';
+          copyFeedbackTimer = setTimeout(resetCopyButton, 1800);
+        });
       });
 
       if ('IntersectionObserver' in window) {
