@@ -123,9 +123,19 @@ body.theme-luka .nav-links {
 }
 
 body.theme-luka .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: var(--luka-text);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+body.theme-luka .nav-links a:hover,
+body.theme-luka .nav-links a:focus-visible {
+  color: var(--luka-accent);
 }
 
 body.theme-luka .theme-toggle {
@@ -215,11 +225,18 @@ body.theme-luka .site-location {
 }
 
 body.theme-luka .site-email {
-  margin: 0 0 24px;
+  margin: 0 0 4px;
   color: var(--luka-secondary);
   font-size: 13px;
   font-family: "Ubuntu Mono", "SFMono-Regular", monospace;
   word-break: break-all;
+}
+
+body.theme-luka .site-cv {
+  margin: 0 0 24px;
+  color: var(--luka-accent);
+  font-size: 13px;
+  font-family: "Ubuntu Mono", "SFMono-Regular", monospace;
 }
 
 body.theme-luka .site-email-copy {
@@ -233,6 +250,13 @@ body.theme-luka .site-email-copy {
   color: var(--luka-accent);
   font: inherit;
   cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+body.theme-luka .site-email-copy:hover,
+body.theme-luka .cv-link:hover,
+body.theme-luka .back-to-top:hover {
+  filter: brightness(1.15);
 }
 
 body.theme-luka .copy-email-icon {
@@ -298,18 +322,11 @@ body.theme-luka .social-icons a:hover {
 body.theme-luka .cv-link {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  margin: 0 0 18px;
-  padding: 7px 13px;
-  border: 1px solid var(--luka-border);
-  border-radius: 999px;
-  color: var(--luka-accent);
-  font-size: 13px;
-  font-weight: 500;
-}
-
-body.theme-luka .cv-link:hover {
-  background: var(--luka-border);
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: inherit;
+  font: inherit;
+  transition: filter 0.2s ease;
 }
 
 body.theme-luka .visitor-card {
@@ -570,7 +587,7 @@ body.theme-luka .skills-groups {
 
 body.theme-luka .skills-groups div {
   display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
+  grid-template-columns: 180px minmax(0, 1fr);
   gap: 16px;
   margin-bottom: 10px;
 }
@@ -581,8 +598,9 @@ body.theme-luka .skills-groups div:last-child {
 
 body.theme-luka .skills-groups dt {
   color: var(--luka-text);
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
 }
 
 body.theme-luka .skills-groups dd {
@@ -590,44 +608,6 @@ body.theme-luka .skills-groups dd {
   color: var(--luka-secondary);
   font-size: 14px;
   overflow-wrap: anywhere;
-}
-
-body.theme-luka .interests-list {
-  margin: 0;
-}
-
-body.theme-luka .interests-list div {
-  margin-bottom: 14px;
-}
-
-body.theme-luka .interests-list div:last-child {
-  margin-bottom: 0;
-}
-
-body.theme-luka .interests-list dt {
-  color: var(--luka-text);
-  font-size: 15px;
-  font-weight: 600;
-}
-
-body.theme-luka .interests-list dd {
-  margin: 2px 0 0;
-  color: var(--luka-secondary);
-  font-size: 14px;
-}
-
-body.theme-luka .contact-list a {
-  overflow-wrap: anywhere;
-}
-
-body.theme-luka .contact-photo {
-  display: block;
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  margin: 0 auto 20px;
-  border-radius: 14px;
-  box-shadow: 0 6px 24px var(--luka-shadow);
 }
 
 body.theme-luka .project-card {
@@ -675,6 +655,9 @@ body.theme-luka .awards-grid {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 body.theme-luka .award-item {
@@ -685,13 +668,31 @@ body.theme-luka .award-item {
 }
 
 body.theme-luka .award-icon {
+  width: 20px;
   flex-shrink: 0;
+  color: var(--luka-accent);
   font-size: 20px;
+  text-align: center;
 }
 
 body.theme-luka .award-text {
   color: var(--luka-text);
   font-size: 14px;
+}
+
+body.theme-luka .back-to-top-wrapper {
+  margin: 0 0 12px;
+  text-align: right;
+}
+
+body.theme-luka .back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--luka-accent);
+  font-size: 14px;
+  text-decoration: none;
+  transition: filter 0.2s ease;
 }
 
 body.theme-luka .site-footer {
@@ -771,14 +772,6 @@ body.theme-luka strong {
     gap: 8px;
   }
 
-  body.theme-luka .nav-links {
-    gap: 12px;
-  }
-
-  body.theme-luka .nav-links a {
-    font-size: 11px;
-  }
-
   body.theme-luka .theme-toggle {
     width: 36px;
     height: 36px;
@@ -808,7 +801,10 @@ body.theme-luka strong {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body.theme-luka .copy-email-icon {
+  body.theme-luka .copy-email-icon,
+  body.theme-luka .cv-link,
+  body.theme-luka .site-email-copy,
+  body.theme-luka .back-to-top {
     transition: none;
   }
 }
@@ -820,19 +816,6 @@ body.theme-luka strong {
 
   body.theme-luka .nav-container {
     align-items: center;
-  }
-
-  body.theme-luka .nav-links {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-items: end;
-    gap: 4px 12px;
-  }
-
-  body.theme-luka .nav-links a {
-    line-height: 1.2;
-    text-align: right;
-    overflow-wrap: anywhere;
   }
 
   body.theme-luka .sidebar {
