@@ -79,8 +79,40 @@ body.theme-luka {
 }
 
 body.theme-luka a {
+  position: relative;
   color: var(--luka-accent);
   text-decoration: none;
+}
+
+body.theme-luka a::after {
+  content: "\f0c1";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 6px);
+  font-family: "Font Awesome 6 Free";
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-3px, -50%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+body.theme-luka a:hover::after,
+body.theme-luka a:focus-visible::after {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+body.theme-luka .social-icons a::after,
+body.theme-luka .back-to-top::after,
+body.theme-luka .research-inline-link::after {
+  content: none;
+}
+
+body.theme-luka .education-content .institution-link::after {
+  color: var(--luka-text);
 }
 
 body.theme-luka a:hover {
@@ -581,6 +613,12 @@ body.theme-luka .experience-list li {
   margin-bottom: 5px;
 }
 
+body.theme-luka .research-inline-link {
+  color: var(--luka-accent);
+  text-decoration: none;
+  transition: filter 0.2s ease;
+}
+
 body.theme-luka .skills-groups {
   margin: 0;
 }
@@ -801,6 +839,7 @@ body.theme-luka strong {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  body.theme-luka a::after,
   body.theme-luka .copy-email-icon,
   body.theme-luka .cv-link,
   body.theme-luka .site-email-copy,
