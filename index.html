@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kaylin(Huilin) Tang | Portfolio</title>
+  <title>Huilin(Kaylin) Tang | Portfolio</title>
   <meta name="description" content="Explore Kaylin (Huilin) Tang’s portfolio: Applied Computing projects in data warehousing, machine learning and web development, plus hands-on IT experience.">
   <meta name="author" content="Kaylin (Huilin) Tang">
   <meta name="keywords" content="Kaylin Tang, Huilin Tang, UWA, information technology, applied computing">
   <link rel="canonical" href="https://kaylintang.github.io/Homepage-luka-template/">
 
-  <meta property="og:title" content="Kaylin(Huilin) Tang | Portfolio">
+  <meta property="og:title" content="Huilin(Kaylin) Tang | Portfolio">
   <meta property="og:description" content="Explore Kaylin (Huilin) Tang’s portfolio: Applied Computing projects in data warehousing, machine learning and web development, plus hands-on IT experience.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kaylintang.github.io/Homepage-luka-template/">
@@ -23,7 +23,7 @@
   <meta property="og:image:alt" content="Portrait of Kaylin Tang">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Kaylin(Huilin) Tang | Portfolio">
+  <meta name="twitter:title" content="Huilin(Kaylin) Tang | Portfolio">
   <meta name="twitter:description" content="Explore Kaylin (Huilin) Tang’s portfolio: Applied Computing projects in data warehousing, machine learning and web development, plus hands-on IT experience.">
   <meta name="twitter:image" content="https://kaylintang.github.io/Homepage-luka-template/assets/img/web-photo-0.JPEG">
   <meta name="twitter:image:alt" content="Portrait of Kaylin Tang">
@@ -49,8 +49,8 @@
       </div>
       <div class="nav-right nav-links">
         <a href="#about">Home</a>
-        <a href="#work-experience">Experience</a>
         <a href="#academic-projects">Projects</a>
+        <a href="#work-experience">Experience</a>
       </div>
     </div>
   </nav>
@@ -62,7 +62,7 @@
           <img src="assets/img/web-photo-0.JPEG" alt="Portrait of Kaylin Tang">
         </div>
 
-        <h1 class="site-name">Kaylin(Huilin) Tang</h1>
+        <h1 class="site-name">Huilin(Kaylin) Tang</h1>
         <p class="site-role">IT · Applied Computing</p>
         <p class="site-location">Perth, Australia</p>
         <p class="site-email">
@@ -79,10 +79,6 @@
           </button>
           <span id="copyEmailStatus" class="visually-hidden" aria-live="polite"></span>
         </p>
-        <p class="site-cv">
-          <a class="cv-link" href="assets/cv/cv_kaylin.pdf" download="Kaylin-Tang-CV.pdf">Download CV</a>
-        </p>
-
         <div class="social-icons" aria-label="Contact links">
           <a href="https://outlook.office.com/mail/" target="_blank" rel="noopener noreferrer" title="Open Outlook Web" aria-label="Open Outlook Web">
             <i class="fa-solid fa-envelope" aria-hidden="true"></i>
@@ -105,15 +101,9 @@
           >
             <i class="fa-brands fa-github" aria-hidden="true"></i>
           </a>
-          <a
-            href="https://kaylintang.ongridea.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Blog"
-            aria-label="Visit Kaylin Tang's blog"
-          >
+          <span class="social-icon-static" role="img" aria-label="Blog" title="Blog">
             <i class="fa-solid fa-blog" aria-hidden="true"></i>
-          </a>
+          </span>
         </div>
 
       </div>
@@ -170,6 +160,77 @@
           </div>
         </div>
       </section>
+
+      <section class="section" id="academic-projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="section-body">
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <img src="assets/img/favicon.png" alt="Huilin Tang seal logo" class="institution-logo project-seal-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>Huilin Tang Photography — Cloud-Native Photography Platform</strong></p>
+                <p class="exp-detail">Personal Project · Full-Stack Development</p>
+                <p class="exp-period">September 2026</p>
+                <ul class="experience-list">
+                  <li>Architected and delivered an end-to-end photography platform, translating product goals into information architecture, responsive UI, structured data models, media pipelines, testing strategy, and production deployment.</li>
+                  <li>Designed a cloud-native architecture on Cloudflare, deploying the Next.js application through Workers, storing optimised image assets in R2, and managing structured photo metadata with D1, with custom-domain routing and production configuration.</li>
+                  <li>Built a repeatable image ingestion and content pipeline that processes original photographs into multiple WebP delivery sizes, extracts and normalises EXIF metadata, generates deterministic asset identifiers, prevents duplicate imports, and publishes structured records to the production database.</li>
+                  <li>Systematically refined performance and application structure through responsive image delivery, pagination, stable portrait/landscape layouts, reusable gallery and detail-page components, caching and deployment configuration, while continuously resolving production and cross-device issues.</li>
+                  <li>Established an engineering-focused quality workflow using Git-based development, automated end-to-end and accessibility testing, database migrations, staged deployment, and iterative UX reviews across desktop and mobile environments.</li>
+                </ul>
+                <dl class="project-stack">
+                  <dt>Technology / Infrastructure</dt>
+                  <dd>Next.js · TypeScript · Cloudflare Workers · R2 · D1 · KV · Drizzle ORM · Playwright · GitHub</dd>
+                </dl>
+                <a class="project-repo-link" href="https://kaylintang.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit the production Huilin Tang Photography website">
+                  <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  <span>Production Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <img src="assets/img/SitBuddy_icon.png" alt="SitBuddy logo" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>SitBuddy — Modern Babysitting Connection Platform</strong></p>
+                <p class="exp-detail">Group Project · Coursework Practice</p>
+                <p class="exp-period">March 2026 – May 2026</p>
+                <ul class="experience-list">
+                  <li>Developed SitBuddy, a full-stack client–server web application built with Flask (Python), SQLAlchemy, SQLite, HTML, CSS, JavaScript, and Bootstrap, connecting parents with babysitters through search, booking, messaging, ratings, and location-based features.</li>
+                  <li>Took primary responsibility for the platform’s UI/UX design and implemented the asynchronous messaging feature, working across message models, Flask routes, templates, client-side JavaScript, and related tests.</li>
+                  <li>Gained practical experience with client–server architecture, routing, APIs, authentication, database-backed application logic, testing, and front-end/back-end integration through development of a complete local web application.</li>
+                  <li>Collaborated through GitHub and an Agile development workflow, coordinating code contributions, integration, version control, and team delivery; the project also used automated pytest checks through GitHub Actions.</li>
+                </ul>
+                <a class="project-repo-link" href="https://github.com/christineoen/CITS5505-Group-Project" target="_blank" rel="noopener noreferrer" aria-label="View the SitBuddy project repository on GitHub">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  <span>GitHub Repository</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card timeline-item">
+            <div class="experience-item">
+              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
+              <div class="experience-content">
+                <p class="exp-title"><strong>Civil Aviation Data Warehousing &amp; Network Analytics</strong></p>
+                <p class="exp-detail">Personal Project · Coursework Practice</p>
+                <p class="exp-period">February 2026 - June 2026</p>
+                <ul class="experience-list">
+                  <li>Built an end-to-end data warehousing workflow for civil aviation datasets, including data extraction, cleaning, transformation, loading, and analytical modelling for downstream reporting and analysis.</li>
+                  <li>Designed a star-schema analytical warehouse to support multidimensional analysis of flight operations, airport performance, and passenger-related patterns, and used SQL to query and validate the resulting data model.</li>
+                  <li>Modelled the global airline network in Neo4j, using Cypher and APOC to explore airport connectivity, route relationships, and transit patterns through graph-based analysis.</li>
+                  <li>Produced analytical outputs through Power BI visualisations and association-rule analysis, translating processed aviation data into interpretable findings for operational and network-level decision support.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
 
       <section class="section" id="work-experience">
         <h2 class="section-title">Experience</h2>
@@ -245,50 +306,6 @@
         </div>
       </section>
 
-      <section class="section" id="academic-projects">
-        <h2 class="section-title">Projects</h2>
-        <div class="section-body">
-          <div class="card timeline-item">
-            <div class="experience-item">
-              <img src="assets/img/SitBuddy_icon.png" alt="SitBuddy logo" class="institution-logo">
-              <div class="experience-content">
-                <p class="exp-title"><strong>SitBuddy — Modern Babysitting Connection Platform</strong></p>
-                <p class="exp-detail">Group Project · Built for Coursework Practice</p>
-                <p class="exp-period">March 2026 – May 2026</p>
-                <ul class="experience-list">
-                  <li>Developed SitBuddy, a full-stack client–server web application built with Flask (Python), SQLAlchemy, SQLite, HTML, CSS, JavaScript, and Bootstrap, connecting parents with babysitters through search, booking, messaging, ratings, and location-based features.</li>
-                  <li>Took primary responsibility for the platform’s UI/UX design and implemented the asynchronous messaging feature, working across message models, Flask routes, templates, client-side JavaScript, and related tests.</li>
-                  <li>Gained practical experience with client–server architecture, routing, APIs, authentication, database-backed application logic, testing, and front-end/back-end integration through development of a complete local web application.</li>
-                  <li>Collaborated through GitHub and an Agile development workflow, coordinating code contributions, integration, version control, and team delivery; the project also used automated pytest checks through GitHub Actions.</li>
-                </ul>
-                <a class="project-repo-link" href="https://github.com/christineoen/CITS5505-Group-Project" target="_blank" rel="noopener noreferrer" aria-label="View the SitBuddy project repository on GitHub">
-                  <i class="fa-brands fa-github" aria-hidden="true"></i>
-                  <span>GitHub Repository</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="card timeline-item">
-            <div class="experience-item">
-              <img src="assets/img/institution.svg" alt="Institution emblem placeholder" class="institution-logo">
-              <div class="experience-content">
-                <p class="exp-title"><strong>Civil Aviation Data Warehousing &amp; Network Analytics</strong></p>
-                <p class="exp-detail">Personal Project · Built for Coursework Practice</p>
-                <p class="exp-period">February 2026 - June 2026</p>
-                <ul class="experience-list">
-                  <li>Built an end-to-end data warehousing workflow for civil aviation datasets, including data extraction, cleaning, transformation, loading, and analytical modelling for downstream reporting and analysis.</li>
-                  <li>Designed a star-schema analytical warehouse to support multidimensional analysis of flight operations, airport performance, and passenger-related patterns, and used SQL to query and validate the resulting data model.</li>
-                  <li>Modelled the global airline network in Neo4j, using Cypher and APOC to explore airport connectivity, route relationships, and transit patterns through graph-based analysis.</li>
-                  <li>Produced analytical outputs through Power BI visualisations and association-rule analysis, translating processed aviation data into interpretable findings for operational and network-level decision support.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
       <section class="section" id="research">
         <h2 class="section-title">Research</h2>
         <div class="section-body">
@@ -336,28 +353,28 @@
         <div class="section-body">
           <dl class="skills-groups">
             <div>
-              <dt>Programming</dt>
-              <dd>C, R, Python</dd>
+              <dt>Cloud &amp; Infrastructure</dt>
+              <dd>Cloudflare Workers, R2, D1, KV · AWS (EC2, S3, IAM, DynamoDB, KMS)</dd>
             </div>
             <div>
-              <dt>Web Development</dt>
-              <dd>HTML, CSS, JavaScript, TypeScript, React, Next.js</dd>
+              <dt>Software Development</dt>
+              <dd>TypeScript, JavaScript, Python, C · Next.js, React · HTML, CSS</dd>
             </div>
             <div>
-              <dt>Cloud &amp; Systems</dt>
-              <dd>AWS (EC2, S3, IAM, DynamoDB, KMS), Linux</dd>
+              <dt>Systems &amp; Computing</dt>
+              <dd>Linux &amp; Open-Source Tooling · OpenMP · Slurm · Bash</dd>
             </div>
             <div>
               <dt>Data &amp; Databases</dt>
-              <dd>MySQL, PostgreSQL, Neo4j, Power BI</dd>
+              <dd>MySQL, PostgreSQL, Neo4j</dd>
             </div>
             <div>
-              <dt>Tools &amp; Collaboration</dt>
-              <dd>Git, GitHub, Agile / Kanban</dd>
+              <dt>Development &amp; Collaboration</dt>
+              <dd>Git, GitHub, Playwright · Agile / Kanban</dd>
             </div>
             <div>
               <dt>Languages</dt>
-              <dd>Mandarin, English (IELTS 7.0), Japanese (Completed a short-term language programme at Waseda University)</dd>
+              <dd>Mandarin · English (IELTS 7.0) · Japanese (Basic)</dd>
             </div>
           </dl>
         </div>
@@ -382,7 +399,7 @@
         <a class="back-to-top" href="#top">Back to Top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
       </div>
       <p>
-        &copy; 2026 Kaylin(Huilin) Tang
+        &copy; 2026 Huilin Tang
         <br>
         <span class="template-credit"><a href="https://github.com/wzsyyh/luka-homepage-template" target="_blank" rel="noopener noreferrer">Luka Homepage Template</a> by <a href="https://wzsyyh.github.io/" target="_blank" rel="noopener noreferrer">Yuheng Yang</a></span>
       </p>

@@ -107,7 +107,8 @@ body.theme-luka a:focus-visible::after {
 
 body.theme-luka .social-icons a::after,
 body.theme-luka .back-to-top::after,
-body.theme-luka .research-inline-link::after {
+body.theme-luka .research-inline-link::after,
+body.theme-luka .nav-links a::after {
   content: none;
 }
 
@@ -332,7 +333,8 @@ body.theme-luka .social-icons {
   flex-wrap: wrap;
 }
 
-body.theme-luka .social-icons a {
+body.theme-luka .social-icons a,
+body.theme-luka .social-icon-static {
   width: 40px;
   height: 40px;
   display: inline-flex;
@@ -345,7 +347,8 @@ body.theme-luka .social-icons a {
   transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
-body.theme-luka .social-icons a:hover {
+body.theme-luka .social-icons a:hover,
+body.theme-luka .social-icon-static:hover {
   background: var(--luka-accent);
   color: #fff !important;
   transform: translateY(-2px);
@@ -490,6 +493,10 @@ body.theme-luka .institution-logo {
   object-fit: contain;
 }
 
+body.theme-luka .project-seal-logo {
+  border-radius: 4px;
+}
+
 body.theme-luka .education-item {
   display: grid;
   grid-template-columns: var(--institution-logo-size) minmax(0, 1fr);
@@ -626,6 +633,24 @@ body.theme-luka .experience-list li {
   margin-bottom: 5px;
 }
 
+body.theme-luka .project-stack {
+  margin: 12px 0 0;
+  color: var(--luka-secondary);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+body.theme-luka .project-stack dt {
+  margin-bottom: 2px;
+  color: var(--luka-text);
+  font-weight: 500;
+}
+
+body.theme-luka .project-stack dd {
+  margin: 0;
+  overflow-wrap: normal;
+}
+
 body.theme-luka .research-inline-link {
   color: var(--luka-accent);
   text-decoration: none;
@@ -652,7 +677,6 @@ body.theme-luka .skills-groups dt {
   color: var(--luka-text);
   font-size: 14px;
   font-weight: 400;
-  white-space: nowrap;
 }
 
 body.theme-luka .skills-groups dd {
