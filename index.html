@@ -172,15 +172,15 @@
                 <p class="exp-detail">Personal Project · Full-Stack Development</p>
                 <p class="exp-period">September 2026</p>
                 <ul class="experience-list">
-                  <li>Architected and delivered an end-to-end photography platform, translating product goals into information architecture, responsive UI, structured data models, media pipelines, testing strategy, and production deployment.</li>
-                  <li>Designed a cloud-native architecture on Cloudflare, deploying the Next.js application through Workers, storing optimised image assets in R2, and managing structured photo metadata with D1, with custom-domain routing and production configuration.</li>
-                  <li>Built a repeatable image ingestion and content pipeline that processes original photographs into multiple WebP delivery sizes, extracts and normalises EXIF metadata, generates deterministic asset identifiers, prevents duplicate imports, and publishes structured records to the production database.</li>
-                  <li>Systematically refined performance and application structure through responsive image delivery, pagination, stable portrait/landscape layouts, reusable gallery and detail-page components, caching and deployment configuration, while continuously resolving production and cross-device issues.</li>
-                  <li>Established an engineering-focused quality workflow using Git-based development, automated end-to-end and accessibility testing, database migrations, staged deployment, and iterative UX reviews across desktop and mobile environments.</li>
+                  <li>Architected and delivered an end-to-end cloud-native photography platform, covering application architecture, responsive UI, structured data, media processing, automated testing, and production deployment.</li>
+                  <li>Designed the production architecture on Cloudflare, running Next.js on Workers, serving optimised images from R2, storing metadata in D1, and using KV and CDN caching to minimise repeated application-layer computation.</li>
+                  <li>Built an automated media ingestion pipeline for WebP derivative generation, EXIF extraction and normalisation, deterministic asset identification, duplicate prevention, and structured database publishing.</li>
+                  <li>Diagnosed and optimised Worker and CDN performance, tracing cache-miss and CPU behaviour, restructuring cache paths, and implementing staged deployment with CDN warmup—reducing median production Worker CPU time to approximately 9 ms.</li>
+                  <li>Established a production-oriented engineering workflow with Git, D1 migrations, Playwright E2E/accessibility testing, cross-device validation, security hardening, staged releases, and systematic production debugging.</li>
                 </ul>
                 <dl class="project-stack">
                   <dt>Technology / Infrastructure</dt>
-                  <dd>Next.js · TypeScript · Cloudflare Workers · R2 · D1 · KV · Drizzle ORM · Playwright · GitHub</dd>
+                  <dd>Next.js · TypeScript · Cloudflare Workers · R2 · D1 · KV · CDN / Cache · Drizzle ORM · Playwright · Wrangler · GitHub</dd>
                 </dl>
                 <a class="project-repo-link" href="https://kaylintang.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit the production Huilin Tang Photography website">
                   <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
@@ -354,7 +354,7 @@
           <dl class="skills-groups">
             <div>
               <dt>Cloud &amp; Infrastructure</dt>
-              <dd>Cloudflare Workers, R2, D1, KV · AWS (EC2, S3, IAM, DynamoDB, KMS)</dd>
+              <dd>Cloudflare Workers, R2, D1, KV, CDN / Caching, Wrangler · AWS (EC2, S3, IAM, DynamoDB, KMS)</dd>
             </div>
             <div>
               <dt>Software Development</dt>
@@ -362,15 +362,15 @@
             </div>
             <div>
               <dt>Systems &amp; Computing</dt>
-              <dd>Linux &amp; Open-Source Tooling · OpenMP · Slurm · Bash</dd>
+              <dd>Linux &amp; Open-Source Tooling · Bash · OpenMP · Slurm · Parallel Computing</dd>
             </div>
             <div>
               <dt>Data &amp; Databases</dt>
-              <dd>MySQL, PostgreSQL, Neo4j</dd>
+              <dd>SQL · MySQL, PostgreSQL, SQLite / D1, Neo4j · Drizzle ORM</dd>
             </div>
             <div>
-              <dt>Development &amp; Collaboration</dt>
-              <dd>Git, GitHub, Playwright · Agile / Kanban</dd>
+              <dt>Engineering Workflow</dt>
+              <dd>Git, GitHub · Playwright · E2E &amp; Accessibility Testing · CI/CD · Agile / Kanban</dd>
             </div>
             <div>
               <dt>Languages</dt>
