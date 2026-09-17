@@ -1,107 +1,108 @@
 <div align="center">
 
-# Luka Homepage
+# Personal Portfolio Homepage
 
-### A warm, minimal, responsive homepage template for researchers, students, builders, and creators.
+A responsive, accessible, and lightweight portfolio for presenting projects, experience, research, and technical skills.
 
-[中文说明](README.zh-CN.md) · [Live Demo](https://wzsyyh.github.io/luka-homepage-template/) · [Use This Template](https://github.com/wzsyyh/luka-homepage-template/generate)
-
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-c2714f?style=flat-square)](https://wzsyyh.github.io/luka-homepage-template/)
-[![Template Ready](https://img.shields.io/badge/Template-Ready-3d3929?style=flat-square)](https://github.com/wzsyyh/luka-homepage-template/generate)
-[![Stack](https://img.shields.io/badge/Stack-HTML%20%7C%20CSS%20%7C%20JS-e28a67?style=flat-square)](https://github.com/wzsyyh/luka-homepage-template)
-[![License](https://img.shields.io/badge/License-MIT-8c8577?style=flat-square)](./LICENSE.md)
+[中文说明](README.zh-CN.md) · [Live Site](https://kaylintang.github.io/Homepage-luka-template/)
 
 </div>
 
-`Luka Homepage` is a standalone template version extracted from my own personal homepage. It is designed to feel warm, clean, and academic without adding any build tooling or framework overhead.
+> [!NOTE]
+> This site is adapted from the [Luka Homepage Template](https://github.com/wzsyyh/luka-homepage-template) by [Yuheng Yang](https://wzsyyh.github.io/). Many thanks to the original author for the warm, minimal design foundation.
 
-## Why This Template
+## About This Project
 
-- Minimal but not plain: clean typography, warm colors, and balanced spacing.
-- Academic-ready layout: built for homepage content, not generic portfolio blocks.
-- Static by default: deploy directly to GitHub Pages with zero build steps.
-- Easy to fork: replace a few text blocks and assets, then publish.
-- Mobile-friendly: desktop and phone layouts are already tuned.
+This repository contains the source code for a personal portfolio homepage focused on cloud infrastructure, software development, data, and applied computing. It turns an academic-style profile into a concise, browsable website while keeping the implementation simple: the entire site is built with static HTML, CSS, and vanilla JavaScript.
 
-## What You Get
+The repository intentionally keeps private contact details and other sensitive personal information out of its documentation. Public profile content is maintained on the website itself.
 
-| Section | Included |
+## Main Sections
+
+| Section | What it presents |
 | --- | --- |
-| Personal intro | `About Me`, avatar, email, social links |
-| Academic timeline | `Education`, `Experience` |
-| Showcase | `Projects`, `Publications`, `Awards` |
-| UX details | Dark mode toggle, smooth entrance animation, responsive layout |
-| Replaceable assets | Avatar, institution logo, favicon, CV link |
+| About | A short professional introduction and areas of interest |
+| Education | Academic background in a timeline layout |
+| Projects | Selected full-stack, cloud, data, and web projects, including technologies and outcomes |
+| Experience | Internship, technical, analytical, and industry experience |
+| Research | Publication and aviation carbon-emissions research |
+| Skills | Cloud, software, systems, databases, engineering workflow, and languages |
+| Awards | Selected academic recognition |
 
-## Quick Start
+## Features
 
-### 1. Create your own copy
+- Responsive two-column desktop layout that becomes a single-column experience on tablets and phones.
+- Light and dark themes, with system preference detection and the visitor's choice saved locally.
+- Fixed navigation, smooth in-page links, and a back-to-top control.
+- Timeline-based presentation for education, projects, experience, and research.
+- Copy-to-clipboard interaction with a fallback for older browsers and accessible status feedback.
+- Lightweight reveal animations powered by `IntersectionObserver`.
+- Reduced-motion support, visible keyboard focus states, semantic sections, and descriptive ARIA labels.
+- SEO and social-sharing metadata for search engines, Open Graph, and X/Twitter cards.
+- No framework, package manager, database, or build step required.
 
-Use GitHub's [Use This Template](https://github.com/wzsyyh/luka-homepage-template/generate) button, or copy this folder into a new repository.
+## Technology
 
-Suggested repository names:
-
-- `luka-homepage`
-- `luka-homepage-template`
-- `luka-academic-homepage`
-
-### 2. Customize the content
-
-You will mainly edit:
-
-- `index.html` for all main content
-- `assets/css/theme-luka.css` for colors, spacing, and layout
-- `assets/img/avatar.svg` for the profile image
-- `assets/img/institution.svg` for school or lab branding
-
-### 3. Replace your assets
-
-- Avatar: replace `assets/img/avatar.svg` with your own `png`, `jpg`, or `svg`
-- Institution logo: replace `assets/img/institution.svg`
-- Favicon: replace `assets/img/favicon.svg`
-- Resume: update the `Download my CV` link in `index.html`
-
-### 4. Deploy to GitHub Pages
-
-1. Open repository `Settings`
-2. Go to `Pages`
-3. Choose `Deploy from a branch`
-4. Select `main` and `/ (root)`
-5. Save and wait for deployment
+| Layer | Tools |
+| --- | --- |
+| Structure | HTML5 |
+| Styling | CSS3, custom properties, responsive media queries |
+| Interaction | Vanilla JavaScript, Clipboard API, `localStorage`, `matchMedia`, `IntersectionObserver` |
+| Typography and icons | Google Fonts, Font Awesome, Academicons |
+| Hosting and automation | GitHub Pages, GitHub Actions |
 
 ## Project Structure
 
 ```text
 .
-├── index.html
+├── .github/workflows/static.yml  # GitHub Pages deployment workflow
+├── assets
+│   ├── css                       # Typography and site theme
+│   ├── cv                        # Locally managed document assets
+│   ├── img                       # Profile, project, and organisation images
+│   └── js                        # Small compatibility helper
+├── index.html                    # Page content, metadata, and interactions
 ├── README.md
 ├── README.zh-CN.md
-├── LICENSE.md
-└── assets
-    ├── css
-    │   ├── font_sans_serif.css
-    │   └── theme-luka.css
-    ├── cv
-    ├── img
-    └── js
-        └── scale.fix.js
+├── RELEASE_NOTES.md
+└── LICENSE.md
 ```
 
-## Design Notes
+## Run Locally
 
-- The left sidebar stays top-aligned, matching the original personal homepage layout.
-- The visual language is intentionally warm and understated rather than highly decorative.
-- The template keeps just enough structure for academic use while remaining easy to personalize.
+Because the project is fully static, it can be opened directly in a browser. Running a local HTTP server is recommended so browser APIs and relative asset paths behave like they do in production:
 
-## Attribution
+```bash
+python3 -m http.server 8000
+```
 
-The footer includes two lines by default:
+Then open `http://localhost:8000`.
 
-1. Your own site copyright
-2. `Luka Homepage Template by Yuheng Yang`
+No dependency installation or compilation is needed.
 
-If you want to preserve template attribution, keep the second line.
+## Deployment
+
+The site is deployed as static content through the workflow in `.github/workflows/static.yml`:
+
+1. A push to the `main` branch, or a manual workflow dispatch, starts the deployment.
+2. GitHub Actions checks out the repository and configures GitHub Pages.
+3. The repository is uploaded as a Pages artifact.
+4. GitHub Pages publishes the artifact to the production environment.
+
+For a fork, enable **GitHub Pages** under the repository settings and select **GitHub Actions** as the source. Update the canonical URL and social-sharing URLs in `index.html` to match the new domain.
+
+## Content and Maintenance
+
+- Edit page copy and section entries in `index.html`.
+- Adjust colour tokens, spacing, typography, layout, and breakpoints in `assets/css/theme-luka.css`.
+- Replace images in `assets/img/` while preserving meaningful alternative text.
+- Keep personal documents and contact details out of version control unless they are deliberately intended to be public.
+- After changing the site URL, update the canonical, Open Graph, and X/Twitter metadata together.
+
+## Privacy
+
+This README deliberately avoids reproducing contact information, private documents, or unnecessary personal details. Before publishing a fork, review the HTML and assets for metadata or files that should not be public.
 
 ## License
 
-This template includes its own `LICENSE.md`, so you can publish it as an independent repository immediately.
+See [LICENSE.md](LICENSE.md) for the license terms that apply to this repository.
