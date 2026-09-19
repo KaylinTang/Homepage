@@ -7,3 +7,7 @@ Thumbs.db
 
 # macOS metadata
 ._*
+
+# Private documents and Windows download metadata
+/assets/cv/*.pdf
+*:Zone.Identifier
