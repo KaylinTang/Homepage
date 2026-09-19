@@ -175,12 +175,12 @@
                   <li>Architected and delivered an end-to-end cloud-native photography platform, covering application architecture, responsive UI, structured data, media processing, automated testing, and production deployment.</li>
                   <li>Designed the production architecture on Cloudflare, running Next.js on Workers, serving optimised images from R2, storing metadata in D1, and using KV and CDN caching to minimise repeated application-layer computation.</li>
                   <li>Built an automated media ingestion pipeline for WebP derivative generation, EXIF extraction and normalisation, deterministic asset identification, duplicate prevention, and structured database publishing.</li>
-                  <li>Diagnosed and optimised Worker and CDN performance, tracing cache-miss and CPU behaviour, restructuring cache paths, and implementing staged deployment with CDN warmup—reducing median production Worker CPU time to approximately 9 ms.</li>
-                  <li>Established a production-oriented engineering workflow with Git, D1 migrations, Playwright E2E/accessibility testing, cross-device validation, security hardening, staged releases, and systematic production debugging.</li>
+                  <li>Diagnosed and optimised Worker and CDN performance by tracing cache misses and Worker CPU behaviour, restructuring cache paths, and implementing staged deployment with CDN warm-up—reducing median production Worker CPU time to approximately 14 ms.</li>
+                  <li>Established a production-oriented engineering workflow with Git, D1 migrations, Playwright E2E/accessibility testing, cross-browser validation, staged releases, Cloudflare WAF security hardening, production traffic/error monitoring, and systematic debugging.</li>
                 </ul>
                 <dl class="project-stack">
                   <dt>Technology / Infrastructure</dt>
-                  <dd>Next.js · TypeScript · Cloudflare Workers · R2 · D1 · KV · CDN / Cache · Drizzle ORM · Playwright · Wrangler · GitHub</dd>
+                  <dd>Next.js · TypeScript · Cloudflare Workers · R2 · D1 · KV · CDN / Edge Cache · Cloudflare WAF · Drizzle ORM · Playwright · Wrangler · GitHub</dd>
                 </dl>
                 <a class="project-repo-link" href="https://kaylintang.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit the production Huilin Tang Photography website">
                   <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
